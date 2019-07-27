@@ -19,9 +19,9 @@ public class FillTheMatrix {
         int[][] matrix = new int[size][size];
 
         if (pattern.equals("A")) {
-            filling(matrix,size,false);
+            filling(matrix,false);
         } else {
-            filling(matrix,size,true);
+            filling(matrix,true);
         }
 
         for (int i = 0; i < size; i++) {
@@ -29,31 +29,31 @@ public class FillTheMatrix {
         }
     }
 
-    private static void filling (int[][] matrix, int size,boolean type){
+    private static void filling (int[][] matrix,boolean type){
         if (type){
-            while (index!=size){
-                forward(matrix,size);
-                if (index==size){
+            while (index!=matrix.length){
+                forward(matrix);
+                if (index==matrix.length){
                     break;
                 }
-                back(matrix, size);
+                back(matrix);
             }
         }else {
-            while (index!=size){
-                forward(matrix,size);
+            while (index!=matrix.length){
+                forward(matrix);
             }
         }
     }
 
-    private static void forward(int[][] matrix, int size) {
+    private static void forward(int[][] matrix) {
 
-        for (int j = 0; j < size; j++) {
+        for (int j = 0; j < matrix.length; j++) {
             matrix[j][index] = counter++;
         }
         index++;
     }
-    private static void back (int[][] matrix, int size){
-        for (int i = size-1; i >= 0; i--) {
+    private static void back (int[][] matrix){
+        for (int i = matrix.length-1; i >= 0; i--) {
             matrix[i][index] = counter++;
         }
         index++;
