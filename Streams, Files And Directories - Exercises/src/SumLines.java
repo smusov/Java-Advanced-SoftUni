@@ -10,7 +10,7 @@ public class SumLines {
 
             while((line=read.readLine())!=null){
 
-                int sum = 0;
+                long sum = 0;
 
                 for (int i = 0; i < line.length(); i++) {
                     sum+=line.charAt(i);
