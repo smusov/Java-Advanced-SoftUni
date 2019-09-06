@@ -36,6 +36,11 @@ public class CustomStack {
         return size;
     }
 
+    public int peek(){
+        isEmpty();
+        return this.items[this.size-1];
+    }
+
     private void resize() {
         this.capacity*=2;
         int[] resizedArray = new int[this.capacity];
