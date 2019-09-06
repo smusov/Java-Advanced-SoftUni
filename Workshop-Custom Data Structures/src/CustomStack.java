@@ -1,5 +1,3 @@
-package SmartArray;
-
 import java.util.NoSuchElementException;
 import java.util.function.Consumer;
 
