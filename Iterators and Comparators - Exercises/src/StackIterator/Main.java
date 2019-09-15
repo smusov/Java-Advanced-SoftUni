@@ -14,7 +14,7 @@ public class Main {
         int [] data = Arrays.stream(read.readLine().split("([, ]+)")).skip(1).mapToInt(Integer::parseInt).toArray();
 
         Arrays.stream(data).forEach(customStack::push);
-        
+
         String input;
         try {
 
